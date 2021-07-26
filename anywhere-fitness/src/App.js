@@ -4,6 +4,7 @@ import axios from 'axios'
 import * as yup from 'yup'
 import FitHome from './components/Home'
 import Login from './components/Login'
+import FitNav from './components/FitNav'
 import './App.css';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Route path='/login'>
           <Login />
         </Route>
+        <FitNav />
         <Route path='/'>
           <FitHome />
         </Route>
