@@ -1,13 +1,11 @@
 import { Link, useRouteMatch } from 'react-router-dom'
 import React from 'react'
-import FitNav from './FitNav'
 
 export default function CreateAccount() {
   const { url } = useRouteMatch()
 
   return (
     <>
-      <FitNav />
       <div className='mainContainer'>
         <h3>Sign Up</h3>
         <h6>Already a member? <Link to={`/login`}>Log In</Link></h6>

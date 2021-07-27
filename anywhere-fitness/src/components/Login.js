@@ -1,13 +1,11 @@
 import { Link, useRouteMatch } from 'react-router-dom'
 import React from 'react'
-import FitNav from './FitNav'
 
 export default function Login() {
   const { url } = useRouteMatch()
 
   return (
     <>
-      <FitNav />
       <div className='mainContainer'>
         <h3>Welcome back</h3>
         <button>Sign in with Apple</button>

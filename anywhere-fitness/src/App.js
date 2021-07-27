@@ -12,6 +12,7 @@ import './App.css';
 export default function App() {
   return (
     <>
+      <FitNav />
       <Switch>
         <Route path='/create-account'>
           <CreateAccount />
@@ -22,7 +23,6 @@ export default function App() {
         <Route path='/login'>
           <Login />
         </Route>
-        <FitNav />
         <Route path='/'>
           <FitHome />
         </Route>
