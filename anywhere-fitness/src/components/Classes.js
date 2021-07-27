@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
-import axios from 'axios'
+import React from 'react'
 import {
   Container,
   Card,
@@ -9,59 +7,37 @@ import {
   CardText,
   Row,
   Col 
-} from 'reactstrap';
+} from 'reactstrap'
 
-const Classes = (props) => {
-  const [details, setDetails]  = useState();
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3001/classes/${id}`)
-      .then(res => {
-        setDetails(res.data)
-        console.log(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [id])
-
-  // if (!workout) {
-  //   return <h3>Working on fetching available class details...</h3>
-  // }
+function ClassDetails(props) {
+  const { name, type, time, duration, intensity, location, enrolled, max } = props.workout
 
   return (
-    <Container className='Classes'>
+    <Col sm="4">
+      <Card body>
+        <CardTitle tag="h3">{name}</CardTitle>
+        <CardText><strong>Type:</strong> {type}</CardText>
+        <CardText><strong>Start Time:</strong> {time}</CardText>
+        <CardText><strong>Duration:</strong> {duration}min</CardText>
+        <CardText><strong>Intensity Level:</strong> {intensity}</CardText>
+        <CardText><strong>Location:</strong> {location}</CardText>
+        <CardText><strong>Booked:</strong>  {enrolled}/{max}</CardText>
+        <Button color='primary'>Book</Button>
+      </Card>    
+    </Col>
+  )
+}
+
+export default function Classes(props) {
+
+  return (
+    <Container className='classes'>
       <h1>Classes</h1>
       <Row>
-        <Col sm="4">
-          <Card body>
-            <CardTitle tag="h3">Outdoor Yoga</CardTitle>
-            <CardText><strong>Type:</strong> Yoga</CardText>
-            <CardText><strong>Start Time:</strong> 5:30pm</CardText>
-            <CardText><strong>Duration:</strong> 45min</CardText>
-            <CardText><strong>Intensity Level:</strong> Moderate</CardText>
-            <CardText><strong>Location:</strong> Terrace Park</CardText>
-            <CardText><strong>Booked:</strong> 5/25</CardText>
-            <Button color='primary'>Book</Button>
-          </Card>
-        </Col>
-        {/* <Col sm="4">
-          <Card body>
-            <CardTitle tag="h3">{details.name}</CardTitle>
-            <CardText><strong>Type:</strong> {details.type}</CardText>
-            <CardText><strong>Start Time:</strong> {details.time}</CardText>
-            <CardText><strong>Duration:</strong> {details.duration}</CardText>
-            <CardText><strong>Intensity Level:</strong> {details.intensity}</CardText>
-            <CardText><strong>Location:</strong> {details.location}</CardText>
-            <CardText><strong>Booked:</strong>  {details.enrolled}/{details.max}</CardText>
-            <Button color='primary'>Book</Button>
-          </Card>
-        </Col> */}
+        {props.workouts.map(workout => (
+          <ClassDetails key={workout.id} workout={workout} />
+        ))}
       </Row>
     </Container>
-  );
-};
-
-export default Classes;
+  )
+}

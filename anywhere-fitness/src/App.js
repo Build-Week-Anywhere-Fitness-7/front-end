@@ -10,6 +10,20 @@ import CreateAccount from './components/CreateAccount'
 import './App.css';
 
 export default function App() {
+  const [classList, setClassList] = useState([]);
+
+  useEffect(() => {
+    const getClasses = () => {
+      axios
+        .get(`http://localhost:3001/classes/`)
+        .then(res => {
+          setClassList(res.data)
+          console.log(res.data)
+        })
+    }
+    getClasses()
+  }, [])
+
   return (
     <>    
     <div className='header'>
@@ -25,7 +39,7 @@ export default function App() {
 
     <Switch>
       <Route path='/classes'>
-        <Classes />
+        <Classes workouts={ classList }/>
       </Route>
       <Route path='/CreateAccount'>
         <CreateAccount />

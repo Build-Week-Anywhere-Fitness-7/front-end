@@ -2,19 +2,19 @@
   "classes": [
     {
       "id": 1,
-      "name": "Outdoor Yoga",
-      "type": "Yoga",
-      "time": "5:30pm",
-      "duration": 45,
-      "intensity": "Moderate",
-      "location": "Terrace Park",
-      "enrolled": 5,
+      "name": "Power Yoga",
+      "type": "Indoor Yoga",
+      "time": "6:30am",
+      "duration": 60,
+      "intensity": "Light",
+      "location": "YMCA",
+      "enrolled": 21,
       "max": 25
     },
     {
       "id": 2,
-      "name": "Outdoor Yoga",
-      "type": "Yoga",
+      "name": "Power Yoga",
+      "type": "Outdoor Yoga",
       "time": "5:30pm",
       "duration": 45,
       "intensity": "Moderate",
@@ -24,13 +24,35 @@
     },
     {
       "id": 3,
-      "name": "Outdoor Yoga",
-      "type": "Yoga",
-      "time": "5:30pm",
+      "name": "Zumba Class",
+      "type": "Dance",
+      "time": "6:00pm",
       "duration": 45,
+      "intensity": "Hard",
+      "location": "Rec Center",
+      "enrolled": 29,
+      "max": 40
+    },
+    {
+      "id": 4,
+      "name": "Cardio Burst",
+      "type": "HIIT",
+      "time": "5:00am",
+      "duration": 30,
+      "intensity": "Hard",
+      "location": "Greenview Park",
+      "enrolled": 19,
+      "max": 20
+    },
+    {
+      "id": 5,
+      "name": "Power Yoga",
+      "type": "Indoor Yoga",
+      "time": "4:30pm",
+      "duration": 60,
       "intensity": "Moderate",
-      "location": "Terrace Park",
-      "enrolled": 30,
+      "location": "Lotus Studio",
+      "enrolled": 37,
       "max": 40
     }
   ]
