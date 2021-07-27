@@ -23,7 +23,7 @@ export default function SignUp() {
             type='password'
             id='password'
           ></input> */}
-          <button type='submit' value="Submit"><Link to={`/create-account`}>Sign up with email</Link></button>
+          <button type='submit' value="Submit"><Link to={`/CreateAccount`}>Sign up with email</Link></button>
         </form>
       </div>
     </>
