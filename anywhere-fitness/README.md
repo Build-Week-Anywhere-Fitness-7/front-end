@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[Product Vision Document](https://www.notion.so/kennymiesner/Product-Vision-Document-4e3d035f46c948b5bb2190eb4a1c3414)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
