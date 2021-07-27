@@ -1,0 +1,37 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "Outdoor Yoga",
+      "type": "Yoga",
+      "time": "5:30pm",
+      "duration": 45,
+      "intensity": "Moderate",
+      "location": "Terrace Park",
+      "enrolled": 5,
+      "max": 25
+    },
+    {
+      "id": 2,
+      "name": "Outdoor Yoga",
+      "type": "Yoga",
+      "time": "5:30pm",
+      "duration": 45,
+      "intensity": "Moderate",
+      "location": "Terrace Park",
+      "enrolled": 15,
+      "max": 30
+    },
+    {
+      "id": 3,
+      "name": "Outdoor Yoga",
+      "type": "Yoga",
+      "time": "5:30pm",
+      "duration": 45,
+      "intensity": "Moderate",
+      "location": "Terrace Park",
+      "enrolled": 30,
+      "max": 40
+    }
+  ]
+}

@@ -58,3 +58,8 @@ form button {
   display: block;
   text-align: center;
 }
+
+/* --- Classes --- */
+.Classes h1 {
+  margin-bottom: 35px;
+}
