@@ -6,6 +6,7 @@ import FitHome from './components/Home'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Nav from './components/Nav'
+import Classes from './components/Classes'
 import CreateAccount from './components/CreateAccount'
 import './App.css';
 
@@ -14,8 +15,11 @@ export default function App() {
     <>
       <Nav />
       <Switch>
+        <Route path='/classes'>
+          <Classes /> 
+        </Route>
         <Route path='/create-account'>
-          <CreateAccount />
+          <CreateAccount /> 
         </Route>
         <Route path='/sign-up'>
           <SignUp />
