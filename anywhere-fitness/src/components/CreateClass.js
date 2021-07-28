@@ -5,11 +5,14 @@ const CreateClass = () => {
     const history = useHistory();
 
     const initState = {
-        potluck_title: '',
-        description: '',
-        date: '',
-        time: '',
-        location: '',
+        Name: '',
+        Type: '',
+        StartTime: '',
+        Duration: '',
+        Intensity: '',
+        Location: '',
+        Attendees: '',
+        ClassSize: ''
     }
 
     const [formValues, setFormValues] = useState(initState)
