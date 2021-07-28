@@ -15,7 +15,7 @@ export default function App() {
   useEffect(() => {
     const getClasses = () => {
       axios
-        .get(`http://localhost:3001/classes/`)
+        .get(`http://localhost:4000/classes/`)
         .then(res => {
           setClassList(res.data)
           console.log(res.data)

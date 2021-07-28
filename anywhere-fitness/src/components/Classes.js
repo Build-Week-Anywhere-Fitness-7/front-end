@@ -9,6 +9,10 @@ import {
   Col 
 } from 'reactstrap'
 
+// JSON-Server Setup
+// Run json-server --watch json-mock-api/src/db.json --port 4000
+// This should allow you to view localhost:3000/classes
+
 function ClassDetails(props) {
   const { name, type, time, duration, intensity, location, enrolled, max } = props.workout
 
