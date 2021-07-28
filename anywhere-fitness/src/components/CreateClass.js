@@ -26,16 +26,15 @@ const CreateClass = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // axiosWithAuth()
-        //     .post('', formValues)
-        //     .then(res => {
-        //         console.log(res)
-        //         history.push('./Profile')
-        //     })
-        //     .catch(err => {
-        //         console.log(err)
-        //     })
-        
+        axiosWithAuth()
+            .post('', formValues)
+            .then(res => {
+                console.log(res)
+                history.push('./Profile')
+            })
+            .catch(err => {
+                console.log(err)
+            })        
     }
 
     return (
