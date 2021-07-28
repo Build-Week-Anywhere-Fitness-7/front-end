@@ -34,8 +34,7 @@ const CreateClass = () => {
             })
             .catch(err => {
                 console.log(err)
-            })
-        
+            })        
     }
 
     return (

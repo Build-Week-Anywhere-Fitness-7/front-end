@@ -1,10 +1,12 @@
 /* --- Header --- */
+
 .header {
   background: #fff;
   box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
 }
 
 /* --- Login --- */
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -54,4 +56,17 @@ input {
 form button {
   display: block;
   text-align: center;
+}
+
+/* --- Classes --- */
+
+.classes h1 {
+  margin-bottom: 35px;
+}
+.classes .card {
+  margin-bottom: 24px;
+}
+
+.classes.container {
+  margin: 75px auto;
 }

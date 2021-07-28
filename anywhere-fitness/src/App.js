@@ -5,12 +5,27 @@ import * as yup from 'yup'
 import FitHome from './components/Home'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
+import Classes from './components/Classes'
 import CreateAccount from './components/CreateAccount'
 import './App.css';
 
 export default function App() {
+  const [classList, setClassList] = useState([]);
+
+  useEffect(() => {
+    const getClasses = () => {
+      axios
+        .get(`http://localhost:3001/classes/`)
+        .then(res => {
+          setClassList(res.data)
+          console.log(res.data)
+        })
+    }
+    getClasses()
+  }, [])
+
   return (
-    
+    <>    
     <div className='header'>
       <nav>
         <Link to='/'>Home</Link>
@@ -20,21 +35,25 @@ export default function App() {
         <Link to={''}>Logout</Link>
       </nav>
       <title>Anytime Fitness</title>
-
-      <Switch>
-        <Route path='/CreateAccount'>
-          <CreateAccount />
-        </Route>
-        <Route path='/SignUp'>
-          <SignUp />
-        </Route>
-        <Route path='/Login'>
-          <Login />
-        </Route>
-        <Route path='/'>
-          <FitHome />
-        </Route>
-      </Switch>
     </div>
+
+    <Switch>
+      <Route path='/classes'>
+        <Classes workouts={ classList }/>
+      </Route>
+      <Route path='/CreateAccount'>
+        <CreateAccount />
+      </Route>
+      <Route path='/SignUp'>
+        <SignUp />
+      </Route>
+      <Route path='/Login'>
+        <Login />
+      </Route>
+      <Route path='/'>
+        <FitHome />
+      </Route>
+    </Switch>
+    </>
   )
 }
