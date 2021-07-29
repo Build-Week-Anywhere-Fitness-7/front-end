@@ -18,6 +18,17 @@
   box-shadow: 0 4px 12px rgb(0 0 0 / 24%);
   background: #fff;
 }
+.mainsecContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 35px 75px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 24%);
+  background: #fff;
+}
 .mv-h, .mv-huge, .mv\+ {
   margin-top: 32px!important;
   margin-bottom: 32px!important;
@@ -48,7 +59,7 @@ label {
   display: block;
   text-align: left;
 }
-button,
+/* button,
 form,
 input {
   width: 100%;
@@ -56,10 +67,18 @@ input {
 form button {
   display: block;
   text-align: center;
-}
+} */
 
 /* --- Classes --- */
+.footer{
+  width:100%;
+  height:auto;
+  margin:1%;
+  padding:2%;
+  background-color: #ccc;
+  text-align: center;
 
+}
 .classes h1 {
   margin-bottom: 35px;
 }
@@ -68,5 +87,79 @@ form button {
 }
 
 .classes.container {
-  margin: 75px auto;
+  margin: 100px auto;
+}
+
+.app {
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+select {
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 0 10px;
+  width: 300px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.inputGroup label {
+  margin-bottom: 3px;
+}
+
+.inputGroup input {
+  height: 30px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+button {
+  height: 30px;
+  background-color: white;
+  border: white;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  height: 30px;
+  background-color: rgb(184, 184, 184);
+}
+
+.button {
+  margin: 0 10px 10px 0;
+}
+#nav{
+  width:100%;
+  background-color:#ccc;
+  height:auto;
+  padding:20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size:25px;
+  margin:1%;
+  
+
+
+}
+#links{
+  color: #741522 !important;
+  text-decoration: none;
 }
